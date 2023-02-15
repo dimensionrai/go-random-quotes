@@ -7,7 +7,6 @@ ENV GO111MODULE=on \
 WORKDIR /app
 COPY . .
 
-RUN go mod init
 RUN go build -o main .
 
 EXPOSE 80
