@@ -10,7 +10,7 @@ env:
   GKE_CLUSTER: id-caslab
   GKE_ZONE: asia-southeast1-a
   DEPLOYMENT_NAME: random-quote
-  IMAGE: random-quote
+  IMAGE: random-quotes
 
 jobs:
   setup-build-publish-deploy:
