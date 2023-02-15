@@ -32,7 +32,8 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/ping", ping)
+	http.HandleFunc("/quotes", func(w http.ResponseWriter, r *http.Request) {
 		// Generate random quote
 		randomQuote := quotes[rand.Intn(len(quotes))]
 
@@ -47,8 +48,6 @@ func main() {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(jsonQuote)
 	})
-	http.HandleFunc("/ping", ping)
-
 
 	log.Fatal(http.ListenAndServe(":80", nil))
 }
