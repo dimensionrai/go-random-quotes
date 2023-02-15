@@ -9,7 +9,7 @@ env:
   PROJECT_ID: id-caslab-int
   GKE_CLUSTER: id-caslab
   GKE_ZONE: asia-southeast1-a
-  DEPLOYMENT_NAME: random-quote
+  DEPLOYMENT_NAME: random-quotes
   IMAGE: random-quotes
 
 jobs:
