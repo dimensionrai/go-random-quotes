@@ -27,7 +27,8 @@ jobs:
     # - uses: google-github-actions/setup-gcloud@v0
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
-        service_account_key: ${{ secrets.GKE_SA_KEY }}
+        # service_account_key: ${{ secrets.GKE_SA_KEY }}
+        service_account_key: ${{ secrets.GKE_CREDENTIAL }}
         project_id: ${{ secrets.GKE_PROJECT }}
 
     # Configure Docker to use the gcloud command-line tool as a credential
@@ -40,7 +41,7 @@ jobs:
       with:
         cluster_name: ${{ env.GKE_CLUSTER }}
         location: ${{ env.GKE_ZONE }}
-        credentials: ${{ secrets.GKE_SA_KEY }}
+        credentials: ${{ secrets.GKE_CREDENTIAL }}
 
     # Building Docker image
     - name: Build Golang
