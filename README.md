@@ -10,12 +10,11 @@ In a nutshell, this pipeline job is created using Github Action which holds some
 - Google Container Registry (GCR)
 - Google Kubernetes Engine (GKE)
 - Gcloud CLI
+- Dataset [https://www.kaggle.com/datasets/akmittal/quotes-dataset]
 - Helm Chart (optional)
 - Cloudflare (optional)
-- Quotes Dataset (https://www.kaggle.com/datasets/akmittal/quotes-dataset)
 ```
 
 ### Testing 
 ![q1](img/q1.png)
 ![q2](img/q2.png)
-![q3](img/q3.png)
