@@ -1,14 +1,12 @@
 name: Build and Deploy to GKE go-random-quotes service
 
 on:
-  push:
-    branches:
-      - main
+    workflow_dispatch:
 
 env:
-  PROJECT_ID: id-caslab-int
-  GKE_CLUSTER: id-caslab
-  GKE_ZONE: asia-southeast1-a
+  PROJECT_ID: hatchiai-dev
+  GKE_CLUSTER: private-hatchiai-np
+  GKE_ZONE: northamerica-northeast1
   DEPLOYMENT_NAME: random-quotes
   IMAGE: random-quotes
 
